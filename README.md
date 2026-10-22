@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Supermercado: Gestión de Inventario
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Sitio web de gestión de inventario para un supermercado, desarrollado con **React** y **React Router**. Permite navegar entre varias pantallas dentro del mismo frontend, sin recargar la página (Single Page Application).
 
-## Available Scripts
+Proyecto de la **Evaluación Formativa 1** (Experiencia 1, Semana 1) de la asignatura **Desarrollo Frontend II (PFY2202)**, Duoc UC.
 
-In the project directory, you can run:
+## Tecnologías
 
-### `npm start`
+- React
+- React Router (`react-router-dom`)
+- HTML, CSS y JavaScript
+- Create React App
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Páginas y rutas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+| Página           | Ruta                | Descripción                                           |
+| ---------------- | ------------------- | ----------------------------------------------------- |
+| Inicio           | `/`                 | Tabla de inventario con stock, precio y estado.       |
+| Quiénes somos    | `/quienes-somos`    | Presentación del supermercado, misión y visión.       |
+| Nuestras tiendas | `/nuestras-tiendas` | Listado de sucursales con dirección y horario.        |
 
-### `npm test`
+La navegación se realiza con un **menú inferior** fijo, que resalta la página activa.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Estructura del proyecto
 
-### `npm run build`
+```
+src/
+├── components/
+│   └── Navbar.js          # Menú inferior de navegación
+├── pages/
+│   ├── Home.js            # Página principal (inventario)
+│   ├── QuienesSomos.js
+│   └── NuestrasTiendas.js
+├── App.js                 # Configuración de rutas (React Router)
+├── App.css                # Estilos de la aplicación
+├── index.js
+└── index.css
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Requisitos previos
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Node.js](https://nodejs.org/) (versión LTS recomendada)
+- npm (se instala junto con Node.js)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Instalación y ejecución
 
-### `npm run eject`
+1. Clona el repositorio:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+   git clone https://github.com/<Francisca-Valenzuela>/supermercado-Francisca-Valenzuela-PFY2202.git
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Entra a la carpeta del proyecto:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+   cd supermercado-francisca-valenzuela-pfy2202
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Instala las dependencias:
 
-## Learn More
+```bash
+   npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Inicia el proyecto:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+   npm start
+```
 
-### Code Splitting
+5. Abre [http://localhost:3000](http://localhost:3000) en el navegador.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Scripts disponibles
 
-### Analyzing the Bundle Size
+- `npm start`: inicia el servidor de desarrollo.
+- `npm run build`: genera la versión optimizada para producción en la carpeta `build`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Autoría
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Francisca Valenzuela, estudiante de Analista Programador Computacional, Duoc UC.gi
