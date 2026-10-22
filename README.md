@@ -44,7 +44,7 @@ src/
 
 ## Instalación y ejecución
 
-11. Clona el repositorio:
+1. Clona el repositorio:
 
 ```bash
    git clone https://github.com/Francisca-Valenzuela/supermercado-francisca-valenzuela-PFY2202.git
