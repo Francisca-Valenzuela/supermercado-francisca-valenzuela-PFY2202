@@ -44,16 +44,16 @@ src/
 
 ## Instalación y ejecución
 
-1. Clona el repositorio:
+11. Clona el repositorio:
 
 ```bash
-   git clone https://github.com/<Francisca-Valenzuela>/supermercado-Francisca-Valenzuela-PFY2202.git
+   git clone https://github.com/Francisca-Valenzuela/supermercado-francisca-valenzuela-PFY2202.git
 ```
 
 2. Entra a la carpeta del proyecto:
 
 ```bash
-   cd supermercado-francisca-valenzuela-pfy2202
+   cd supermercado-francisca-valenzuela-PFY2202
 ```
 
 3. Instala las dependencias:
@@ -77,4 +77,4 @@ src/
 
 ## Autoría
 
-Francisca Valenzuela, estudiante de Analista Programador Computacional, Duoc UC.gi
+Francisca Valenzuela, estudiante de Analista Programador Computacional, Duoc UC.
