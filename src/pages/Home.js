@@ -8,32 +8,40 @@ function Home() {
   ];
 
   return (
-   <div className="tabla-contenedor">
-  <table className="tabla-inventario">
-    <thead>
-      <tr>
-        <th scope="col">Producto</th>
-        <th scope="col">Categoría</th>
-        <th scope="col" className="num">Stock</th>
-        <th scope="col" className="num">Precio</th>
-        <th scope="col">Estado</th>
-      </tr>
-    </thead>
-    <tbody>
-      {productos.map((p) => (
-        <tr key={p.id}>
-          <td>{p.nombre}</td>
-          <td>{p.categoria}</td>
-          <td className="num">{p.stock}</td>
-          <td className="num">${p.precio.toLocaleString('es-CL')}</td>
-          <td className={p.stock < 20 ? 'stock-bajo' : 'stock-ok'}>
-            {p.stock < 20 ? 'Stock bajo' : 'Disponible'}
-          </td>
-        </tr>
-      ))}
-    </tbody>
-  </table>
-</div>
+    <section className="page">
+      <h1>Gestión de Inventario</h1>
+      <p>
+        Bienvenido al sistema de inventario del supermercado. Aquí puedes revisar
+        el stock disponible de los productos.
+      </p>
+
+      <div className="tabla-contenedor">
+        <table className="tabla-inventario">
+          <thead>
+            <tr>
+              <th scope="col">Producto</th>
+              <th scope="col">Categoría</th>
+              <th scope="col" className="num">Stock</th>
+              <th scope="col" className="num">Precio</th>
+              <th scope="col">Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            {productos.map((p) => (
+              <tr key={p.id}>
+                <td>{p.nombre}</td>
+                <td>{p.categoria}</td>
+                <td className="num">{p.stock}</td>
+                <td className="num">${p.precio.toLocaleString('es-CL')}</td>
+                <td className={p.stock < 20 ? 'stock-bajo' : 'stock-ok'}>
+                  {p.stock < 20 ? 'Stock bajo' : 'Disponible'}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
   );
 }
 
