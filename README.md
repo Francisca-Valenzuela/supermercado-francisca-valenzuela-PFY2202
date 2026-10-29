@@ -16,7 +16,7 @@ Proyecto de la **Evaluación Formativa 1** (Experiencia 1, Semana 1) de la asign
 | Página           | Ruta                | Descripción                                           |
 | ---------------- | ------------------- | ----------------------------------------------------- |
 | Inicio           | `/`                 | Tabla de inventario con stock, precio y estado.       |
-| Quiénes somos    | `/quienes-somos`    | Presentación del supermercado, misión y visión.       |
+| Quiénes somos    | `/quienes-somos`    | Presentación, misión, visión, valores, categorías y contacto. |
 | Nuestras tiendas | `/nuestras-tiendas` | Sucursales con mapa, dirección, horario, teléfono y correo. |       |
 | No encontrada    | `*`                 | Página 404 para cualquier ruta que no exista.         |
 
@@ -38,7 +38,8 @@ La navegación se realiza con un **menú inferior** fijo, que resalta la página
     │   └── TarjetaTienda.jsx    # Tarjeta de una sucursal
     ├── data/
     │   ├── productos.js   # Datos de productos del inventario
-    │   └── tiendas.js     # Datos de las sucursales
+    │   ├── tiendas.js     # Datos de las sucursales
+    │   └── valores.js     # Valores del supermercado
     ├── pages/
     │   ├── Home.jsx       # Página principal (inventario)
     │   ├── QuienesSomos.jsx
