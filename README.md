@@ -17,7 +17,7 @@ Proyecto de la **Evaluación Formativa 1** (Experiencia 1, Semana 1) de la asign
 | ---------------- | ------------------- | ----------------------------------------------------- |
 | Inicio           | `/`                 | Tabla de inventario con stock, precio y estado.       |
 | Quiénes somos    | `/quienes-somos`    | Presentación del supermercado, misión y visión.       |
-| Nuestras tiendas | `/nuestras-tiendas` | Listado de sucursales con dirección y horario.        |
+| Nuestras tiendas | `/nuestras-tiendas` | Sucursales con mapa, dirección, horario, teléfono y correo. |       |
 | No encontrada    | `*`                 | Página 404 para cualquier ruta que no exista.         |
 
 La navegación se realiza con un **menú inferior** fijo, que resalta la página activa.

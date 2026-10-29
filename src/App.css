@@ -75,7 +75,7 @@ body {
 /* Tarjetas de tiendas */
 .lista-tiendas {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 16px;
   margin-top: 20px;
 }
@@ -157,3 +157,27 @@ body {
   margin: 4px 0;
 }
 
+/* Mapa y datos de contacto de cada tienda */
+.mapa-tienda {
+  display: block;
+  width: 100%;
+  height: 180px;
+  margin-bottom: 12px;
+  border: 0;
+  border-radius: 6px;
+}
+
+.datos-tienda dt {
+  margin-top: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #166534;
+}
+
+.datos-tienda dd {
+  margin: 2px 0 0;
+}
+
+.datos-tienda a {
+  color: #166534;
+}
