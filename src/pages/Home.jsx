@@ -1,5 +1,5 @@
 import { productos } from '../data/productos';
-import { estaConStockBajo } from '../utils/inventario';
+import TablaInventario from '../components/TablaInventario';
 
 function Home() {
   return (
@@ -10,36 +10,7 @@ function Home() {
         el stock disponible de los productos.
       </p>
 
-      <div className="tabla-contenedor">
-        <table className="tabla-inventario">
-          <thead>
-            <tr>
-              <th scope="col">Producto</th>
-              <th scope="col">Categoría</th>
-              <th scope="col" className="num">Stock</th>
-              <th scope="col" className="num">Precio</th>
-              <th scope="col">Estado</th>
-            </tr>
-          </thead>
-          <tbody>
-            {productos.map((p) => {
-              const stockBajo = estaConStockBajo(p.stock);
-
-              return (
-                <tr key={p.id}>
-                  <td>{p.nombre}</td>
-                  <td>{p.categoria}</td>
-                  <td className="num">{p.stock}</td>
-                  <td className="num">${p.precio.toLocaleString('es-CL')}</td>
-                  <td className={stockBajo ? 'stock-bajo' : 'stock-ok'}>
-                    {stockBajo ? 'Stock bajo' : 'Disponible'}
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
+      <TablaInventario productos={productos} />
     </section>
   );
 }
