@@ -14,13 +14,12 @@ body {
   flex-direction: column;
 }
 
-/* Contenido: deja espacio abajo para que el menú fijo no tape nada */
 .contenido {
   flex: 1;
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  padding: 24px 16px 100px;
+  padding: 24px 16px;
 }
 
 .page h1 {
@@ -144,3 +143,17 @@ body {
   color: #166534;
   font-weight: 600;
 }
+
+/* Pie de página: deja espacio abajo para el menú fijo */
+.pie-pagina {
+  padding: 16px 16px 76px;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #4b5563;
+  border-top: 1px solid #e5e7eb;
+}
+
+.pie-pagina p {
+  margin: 4px 0;
+}
+

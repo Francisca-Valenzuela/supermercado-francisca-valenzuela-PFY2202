@@ -30,10 +30,12 @@ La navegación se realiza con un **menú inferior** fijo, que resalta la página
 ├── public/                # Archivos estáticos (favicon, manifest, logos)
 └── src/
     ├── components/
-    │   └── Navbar.jsx     # Menú inferior de navegación
     │   ├── FilaProducto.jsx     # Fila de la tabla de inventario
-    │   └── TablaInventario.jsx  # Tabla de inventario
-    │   ├── TarjetaTienda.jsx    # Tarjeta de una sucursal
+    │   ├── Footer.jsx           # Pie de página
+    │   ├── Layout.jsx           # Estructura común (contenido, footer y menú)
+    │   ├── Navbar.jsx           # Menú inferior de navegación
+    │   ├── TablaInventario.jsx  # Tabla de inventario
+    │   └── TarjetaTienda.jsx    # Tarjeta de una sucursal
     ├── data/
     │   ├── productos.js   # Datos de productos del inventario
     │   └── tiendas.js     # Datos de las sucursales
