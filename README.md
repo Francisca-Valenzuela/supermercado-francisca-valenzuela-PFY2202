@@ -1,56 +1,71 @@
 # Supermercado: Gestión de Inventario
 
-Sitio web de gestión de inventario para un supermercado, desarrollado con **React** y **React Router**. Permite navegar entre varias pantallas dentro del mismo frontend, sin recargar la página (Single Page Application).
+Sitio web de gestión de inventario para un supermercado, desarrollado con **React**, **React Router**, **Context API** y **Tailwind CSS**. Permite navegar entre varias pantallas sin recargar la página (Single Page Application), ver el inventario y agregar nuevos artículos mediante un formulario.
 
-Proyecto de la **Evaluación Formativa 1** (Experiencia 1, Semana 1) de la asignatura **Desarrollo Frontend II (PFY2202)**, Duoc UC.
+Proyecto de la **Evaluación Formativa 2** (Experiencia 1, Semana 2) de la asignatura **Desarrollo Frontend II (PFY2202)**, Duoc UC. Es la continuación de la Evaluación Formativa 1 (Semana 1).
 
 ## Tecnologías
 
 - React
 - React Router (`react-router-dom`)
-- HTML, CSS y JavaScript
+- Context API de React (estado global del inventario)
+- Tailwind CSS (framework CSS, integrado con el plugin `@tailwindcss/vite`)
+- HTML y JavaScript
 - Vite
+
+## Funcionalidades
+
+- Menú de navegación superior fijo, que resalta la página activa.
+- Estado global del inventario con Context API: cada artículo tiene nombre, marca, tipo de producto, stock y precio.
+- Formulario para agregar nuevos artículos, con validación de campos.
+- Tabla que lista todos los artículos del inventario, con indicador de stock bajo.
+- Portada con resumen del inventario (total de artículos y cantidad con stock bajo).
+
+> **Nota:** el estado global se mantiene en memoria. Los artículos agregados se pierden al recargar la página.
 
 ## Páginas y rutas
 
-| Página           | Ruta                | Descripción                                           |
-| ---------------- | ------------------- | ----------------------------------------------------- |
-| Inicio           | `/`                 | Tabla de inventario con stock, precio y estado.       |
-| Quiénes somos    | `/quienes-somos`    | Presentación, misión, visión, valores, categorías y contacto. |
-| Nuestras tiendas | `/nuestras-tiendas` | Sucursales con mapa, dirección, horario, teléfono y correo. |       |
-| No encontrada    | `*`                 | Página 404 para cualquier ruta que no exista.         |
-
-La navegación se realiza con un **menú inferior** fijo, que resalta la página activa.
+| Página           | Ruta                | Descripción                                                     |
+| ---------------- | ------------------- | --------------------------------------------------------------- |
+| Inicio           | `/`                 | Bienvenida y resumen del inventario.                            |
+| Inventario       | `/inventario`       | Tabla con todos los artículos: nombre, marca, tipo, stock, precio y estado. |
+| Agregar artículo | `/agregar`          | Formulario para ingresar un nuevo artículo al inventario.       |
+| Quiénes somos    | `/quienes-somos`    | Presentación, misión, visión, valores, categorías y contacto.   |
+| Nuestras tiendas | `/nuestras-tiendas` | Sucursales con mapa, dirección, horario, teléfono y correo.     |
+| No encontrada    | `*`                 | Página 404 para cualquier ruta que no exista.                   |
 
 ## Estructura del proyecto
 
 ```
 ├── index.html             # Punto de entrada HTML de Vite
-├── vite.config.js         # Configuración de Vite
-├── public/                # Archivos estáticos (favicon, manifest, logos)
+├── vite.config.js         # Configuración de Vite (React + Tailwind)
+├── public/                # Archivos estáticos (favicon, manifest, logos, imágenes)
 └── src/
     ├── components/
     │   ├── FilaProducto.jsx     # Fila de la tabla de inventario
     │   ├── Footer.jsx           # Pie de página
-    │   ├── Layout.jsx           # Estructura común (contenido, footer y menú)
-    │   ├── Navbar.jsx           # Menú inferior de navegación
+    │   ├── Layout.jsx           # Estructura común (menú, contenido y footer)
+    │   ├── Navbar.jsx           # Menú superior de navegación
     │   ├── TablaInventario.jsx  # Tabla de inventario
     │   └── TarjetaTienda.jsx    # Tarjeta de una sucursal
+    ├── context/
+    │   └── InventarioContext.jsx  # Estado global: lista de artículos y agregarProducto
     ├── data/
-    │   ├── productos.js   # Datos de productos del inventario
+    │   ├── productos.js   # Artículos iniciales y tipos de producto
     │   ├── tiendas.js     # Datos de las sucursales
     │   └── valores.js     # Valores del supermercado
     ├── pages/
-    │   ├── Home.jsx       # Página principal (inventario)
+    │   ├── Home.jsx             # Portada con resumen
+    │   ├── Inventario.jsx       # Listado de artículos
+    │   ├── AgregarArticulo.jsx  # Formulario de ingreso de artículos
     │   ├── QuienesSomos.jsx
     │   ├── NuestrasTiendas.jsx
     │   └── NoEncontrada.jsx
     ├── utils/
     │   └── inventario.js  # Umbral de stock bajo y función auxiliar
-    ├── App.jsx            # Configuración de rutas (React Router)
-    ├── App.css            # Estilos de la aplicación
+    ├── App.jsx            # Proveedor de estado y rutas (React Router)
     ├── main.jsx           # Punto de entrada de React
-    └── index.css
+    └── index.css          # Importa Tailwind CSS
 ```
 
 ## Requisitos previos
