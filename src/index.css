@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+/* Clases reutilizables con @apply (evita repetir clases en el JSX) */
+@layer components {
+  .campo-input {
+    @apply w-full rounded-md border border-gray-300 bg-white px-3 py-2 focus:outline-2 focus:outline-green-700;
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

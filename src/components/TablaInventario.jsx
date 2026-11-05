@@ -2,9 +2,13 @@ import FilaProducto from './FilaProducto';
 
 const th = 'bg-green-900 text-white p-3 text-left';
 
-function TablaInventario({ productos }) {
+function TablaInventario({ productos, mensajeVacio = 'No hay artículos en el inventario.' }) {
   if (productos.length === 0) {
-    return <p className="mt-5">No hay artículos en el inventario.</p>;
+    return (
+      <p className="mt-5" role="status">
+        {mensajeVacio}
+      </p>
+    );
   }
 
   return (
@@ -18,6 +22,9 @@ function TablaInventario({ productos }) {
             <th scope="col" className={`${th} text-right`}>Stock</th>
             <th scope="col" className={`${th} text-right`}>Precio</th>
             <th scope="col" className={th}>Estado</th>
+            <th scope="col" className={th}>
+              <span className="sr-only">Acciones</span>
+            </th>
           </tr>
         </thead>
         <tbody>

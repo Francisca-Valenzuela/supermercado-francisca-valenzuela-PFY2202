@@ -1,9 +1,6 @@
-import { Link } from 'react-router-dom';
 import { useInventario } from '../context/InventarioContext';
 import { estaConStockBajo } from '../utils/inventario';
-
-const boton =
-  'inline-flex items-center min-h-11 px-4 rounded-lg font-semibold bg-green-900 text-white hover:bg-green-800';
+import Boton from '../components/Boton';
 
 function Home() {
   const { productos } = useInventario();
@@ -14,7 +11,7 @@ function Home() {
       <h1 className="text-3xl font-bold text-green-900">Gestión de Inventario</h1>
       <p>
         Bienvenido al sistema de inventario del supermercado. Aquí puedes revisar el stock
-        disponible y agregar nuevos artículos.
+        disponible, filtrar artículos, ver su detalle, modificarlos y agregar nuevos.
       </p>
 
       <div className="grid gap-3 grid-cols-[repeat(auto-fit,minmax(200px,1fr))] mt-2">
@@ -29,8 +26,8 @@ function Home() {
       </div>
 
       <div className="flex flex-wrap gap-3 mt-2">
-        <Link to="/inventario" className={boton}>Ver inventario</Link>
-        <Link to="/agregar" className={boton}>Agregar artículo</Link>
+        <Boton to="/inventario">Ver inventario</Boton>
+        <Boton to="/agregar">Agregar artículo</Boton>
       </div>
     </section>
   );
