@@ -1,0 +1,1 @@
+import{n as e}from"./index-BZpQMYYc.js";var t=e();function n({etiqueta:e,nombre:n,error:r,children:i}){return(0,t.jsxs)(`div`,{className:`flex flex-col gap-1`,children:[(0,t.jsx)(`label`,{htmlFor:n,className:`font-semibold text-green-800`,children:e}),i,r&&(0,t.jsx)(`p`,{className:`text-sm text-red-700`,role:`alert`,children:r})]})}export{n as t};
