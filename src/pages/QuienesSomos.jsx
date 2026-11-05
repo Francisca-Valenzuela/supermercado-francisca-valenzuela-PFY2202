@@ -16,7 +16,7 @@ function QuienesSomos() {
       <figure className="my-2">
         <img
           className="block w-full max-h-72 object-cover rounded-lg"
-          src="/img/local.jpg"
+          src={`${import.meta.env.BASE_URL}img/local.jpg`}
           alt="Interior de un supermercado con góndolas ordenadas"
         />
         <figcaption className="mt-1.5 text-sm text-gray-600">
@@ -55,7 +55,7 @@ function QuienesSomos() {
       <div className="flex flex-wrap items-center gap-4">
         <img
           className="flex-[1_1_260px] max-w-full h-52 object-cover rounded-lg"
-          src="/img/productos-frescos.jpg"
+          src={`${import.meta.env.BASE_URL}img/productos-frescos.jpg`}
           alt="Frutas y verduras frescas en exhibición"
         />
         <div className="flex-[1_1_220px]">
